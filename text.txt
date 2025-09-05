@@ -1,0 +1,301 @@
+font-size 
+text-xs , sm , md , lg , xl , 2xl , 3xl 
+
+property ? which why ? concept 
+
+read the documentation 
+follow the documentation
+
+CSS => JS => 
+
+JavaScript engine
+
+<style>
+ css code 
+</style>
+
+html 
+
+<script>
+ js code
+</script>
+
+
+PHP > PHP local > php > fullstack
+
+JS > frontend ( React , Next , Angular , Vue , Solid , Preact , Svelete )
+    backend ( Express , Nest , Adonis , Elysia )
+Java  > Java SpringBoot , JavaSE 
+Go >
+C# > blade > frontend ( jQuery ) api 
+python > odoo , flask 
+
+.js > ( JavaScript file )
+.c > 
+.cs 
+.py 
+
+programmin < fundemental >
+
+variable > value ( တန်ဖိုး ) > value 
+
+syntax ( rule ) 
+
+left = right value 
+
+assignment operator 
+
+keyword variable_name = value ;
+var test = "";
+
+value ( data type );
+string "" , '' ;
+number -& ~ +&
+boolean , true , false
+
+operator comperison == != > < === !== >= <=
+== ===
+
+mathematic + - * /() % 
+
+++ -- 
+
+1++ == 2
+2-- == 1 
+
+dynamic programming language 
+
+condition 
+
+if( condition ){
+
+}else{
+
+}
+
+swtich case break;
+
+swtich(1):{
+    case 1:{
+
+       break; 
+    }
+    case 2:{
+
+       break; 
+    }
+    case 3:{
+
+       break; 
+    }
+}
+
+
+loop => for while 
+step 1 => start point 
+step 2 => end point 
+step 3 => start ~ end changes
+
+for( 1 , 2 , 3 ){
+
+}
+
+var j = 0;
+
+while(j < 5){
+   j++;
+}
+
+looping => 
+
+
+variable value > array , object 
+
+array => variable > more than 1 value array 
+
+array index 
+
+empty array 
+
+var varName = [];
+
+array index 0 
+
+function => {
+
+}
+
+execute ( ခေါ် , call )
+
+function funName(){
+
+}
+
+funName(); < programming lang < function execute 
+regular function 
+
+parameterize funciton
+function funName( params ){
+
+}
+
+funName("Hello");
+
+void function ( no value return )
+
+retur value function 
+
+function funName() {
+   return value 
+}
+
+data type => number , string , boolean , array 
+
+function > function 
+
+function > 
+
+recursive 
+
+data type > object > 
+
+{
+  key : value, 
+}
+
+obj.key ( dot notation ) string type , number not 
+obj[key] ( bracket notation ) all string , number , calculation
+
+OOP
+
+Modern JS > es6 
+
+confirm 
+prompt
+
+calculator 
+
+fist number 
+seconde number 
+
+1
+2
+3
+4
+5
+
+alert()
+prompt() > prompt 
+confirm()
+
+Number();
+
+calculator > {
+   တွက်ချက်မှု ( ကိန်းဂဏန်း ) > user < 2 Numbers 
+   calculation process > 
+   inform to user > ( 1, 2 , 3 , 4, 5 )
+   number > process = execute ( run );
+   show result to user
+
+   1. user input numbers ( minimum 2 )
+   2. user input ( process number )
+   3. calculation < condition 
+   4. show result
+} >> upgrade {
+   recalculate ? 
+   yes no > 1 , 2 , Y yes N no
+
+   1. user input retry process?
+   accept > repeat the whole process 
+   denied > stop
+}
+
+string + string = stringstring
+number + number = number
+'' "" `` 
+
+programming basic 
+
+JS version => basic ( variable , operator , function , condition , loop )
+JS old version =< before es6 ( version )
+JS es6 => (
+   library , framework 
+)
+=> node JS ( server side <API> backend )
+
+es6 => variable declaration ( var Keyword ) => var let const 
+operator => ? : && ?
+function => ( keyword function ) 
+arrow function ____ () => {}
+
+function funcName () {
+
+}
+
+
+variable => future can change variable 
+constant variable => const 
+
+var let 
+
+var => windows
+
+var
+
+variable name ( unique )
+
+scope chain 
+{
+
+}
+
+let 
+const 
+
+regular function 
+arrow function ( nameless function )
+
+IIFE ( imediate invoke function expression )
+
+es6 ( variable , function ) learned 
+
+DOM ( Document Object Model )
+
+JS engine ( HTML CSS ) manipulate
+
+JS Object
+
+web => 
+
+dom => Document
+
+JS => 
+button click change image 
+button click background color 
+button click input type ( password , text )
+
+user data 2 {
+   1. username 
+   2. password 
+}
+login button click
+condition => ( true , false )
+status 
+button hide , show 
+
+html ( click , change , keydown , keyup )
+
+username => bate
+password => thar 
+
+ES6
+
+DOM ( step )
+
+database 
+
+data => device ( ram ) clear ( no data )
+
+sign up => ( data store ) database ( backend )
+
+
