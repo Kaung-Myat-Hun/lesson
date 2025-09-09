@@ -298,4 +298,37 @@ data => device ( ram ) clear ( no data )
 
 sign up => ( data store ) database ( backend )
 
+array , object 
 
+var , let <= data change ( manipulate )
+
+const => constant ( ပြောင်းလဲလို့မရတဲ့ တန်ဖိုး )
+
+pi , arrow function , array 
+
+[] 
+
+array.method();
+
+slice( start , end )
+
+object.key 
+object.method() 
+
+add new array behind => array.push( any value );
+last index delete => array.pop();
+random index value/s => array.slice( start , end );
+
+mini program ( to do list );
+
+todo list ( 
+   main function ( feature )
+      1 . type ( input box )
+      2 . button ( click add function )
+      3 . list ( todos ) 
+ )
+
+ input ( text value ) => variable => assign 
+ button ( click ) => variable => insert in array 
+
+ git push 

@@ -1,54 +1,27 @@
-const username = document.getElementById("username");
-const password = document.getElementById("password");
-const loginBtn = document.getElementById("login");
-const logoutBtn = document.getElementById("logout");
-const status = document.getElementById("status");
-let usernameValue = "";
-let passwordValue = "";
+const input = document.getElementById("input");
+const btn = document.getElementById("add-btn");
+const list = document.getElementById("todo-list");
+const form = document.getElementById("form");
 
-const userNameFunction = (event) => {
-    usernameValue = event.target.value;
-}
-const passwordFunction = (event) => {
-    passwordValue = event.target.value;
-}
+const todos = [];
+let todoText = "";
 
-username.addEventListener("change", userNameFunction)
-password.addEventListener("change", passwordFunction)
+input.addEventListener("change" , (e)=> {
+    todoText = e.target.value;
+});
 
-const loginFunction = () => {
-    if(usernameValue === "" ){
-        alert("Username cannot be empty")
+form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    if(todoText === ""){
+        alert("Cannot add empty string");
         return ;
     }
-    if(passwordValue === ""){
-        alert("Password cannnot be empty")
-        return ;
+    todos.push(todoText);
+    input.value = "";
+    list.innerHTML = "";
+    for(let i =0 ;i < todos.length ; i++){
+        const liTag = document.createElement("li");
+        liTag.innerText = todos[i];
+        list.appendChild(liTag);
     }
-    if(usernameValue !== 'bate'){
-        alert("Username is wrong")
-        return ;
-    }
-    if(passwordValue !== "thar"){
-        alert("Password is wrong")
-        return ;
-    }
-    // location.href="welcome.html"
-    loginBtn.style.display= "none";
-    logoutBtn.style.display="block";
-    status.style = "background-color: green; color: white;"
-    status.innerText = "Welcome back " + usernameValue + " " + passwordValue
-}
-
-loginBtn.addEventListener("click", loginFunction);
-
-const logoutFunction =() => {
-    loginBtn.style.display="block";
-    logoutBtn.style.display="none";
-    status.style ="";
-    status.innerText = "Hello"
-}
-
-logoutBtn.addEventListener("click", logoutFunction);
-
-
+})
