@@ -3,7 +3,7 @@ const btn = document.getElementById("add-btn");
 const list = document.getElementById("todo-list");
 const form = document.getElementById("form");
 
-const todos = [];
+let todos = [];
 let todoText = "";
 
 input.addEventListener("change" , (e)=> {
@@ -18,10 +18,23 @@ form.addEventListener("submit", (e) => {
     }
     todos.push(todoText);
     input.value = "";
+    loopRenderFunction();
+})
+
+const deleteTodo = (li) => {
+    const filtered = todos.filter((item) => {
+        return item !== li.srcElement.innerText
+    })
+    todos = filtered
+    loopRenderFunction();
+}
+
+const loopRenderFunction = () => {
     list.innerHTML = "";
     for(let i =0 ;i < todos.length ; i++){
         const liTag = document.createElement("li");
+        liTag.onclick = deleteTodo;
         liTag.innerText = todos[i];
         list.appendChild(liTag);
     }
-})
+}

@@ -4,16 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>tailwind css</title>
-    <!-- <link rel="stylesheet" href="./src/output.css"> -->
+    <link rel="stylesheet" href="./src/output.css">
+    <style>
+        .list-item-custom li{
+            list-style-type: none;
+            font-size: 20px;
+            text-align: center;
+            background-color: rgba(128, 128, 128, 0.348);
+            padding: 4px;
+            width: 30%;
+            margin-top: 5px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .list-item-custom:hover li{
+            background-color: rgba(128, 128, 128, 0.195);
+        }
+    </style>
 </head>
 <body>
-    <h1>Todo List</h1>
+    <h1 class="text-center text-[24px] font-semibold">Todo List</h1>
 
-    <form id="form">
-        <input type="text" id="input" name="input">
-        <button id="add-btn">Add Todo</button>
+    <form id="form" class="p-4 flex justify-center">
+        <input type="text" id="input" name="input" class="bg-gray-200 py-2 px-5 outline-none rounded-md w-[300px]" placeholder="Enter todos" autofocus>
+        <button id="add-btn" class="bg-blue-400 w-[150px] p-2 rounded-md">Add Todo</button>
     </form>
-    <ul id="todo-list"></ul>
+    <ul id="todo-list" class="list-item-custom flex flex-col justify-center items-center"></ul>
 
     <script src="./script.js"></script>
 </body>

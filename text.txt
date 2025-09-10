@@ -332,3 +332,5 @@ todo list (
  button ( click ) => variable => insert in array 
 
  git push 
+
+ array.filter( () => {} ) <= new array return ( filtered array )
