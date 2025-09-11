@@ -334,3 +334,22 @@ todo list (
  git push 
 
  array.filter( () => {} ) <= new array return ( filtered array )
+ 
+ dom ( manipulte ) javascript => build in method ( fucntion )
+
+console = {
+   log() {},
+   error() {},
+   warn() {}
+}
+
+build in storage < default ( database ) > 
+
+localStorage => setItem ( "" , "" ) < both parameters string > getItem("key")
+sessionStorage => setItem() < > getItem()
+
+array < second value ( must be string )
+
+array method .join(); .split();
+
+","

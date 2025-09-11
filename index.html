@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="./src/output.css">
     <style>
         .list-item-custom li{
-            list-style-type: none;
             font-size: 20px;
             text-align: center;
             background-color: rgba(128, 128, 128, 0.348);
@@ -29,7 +28,9 @@
         <input type="text" id="input" name="input" class="bg-gray-200 py-2 px-5 outline-none rounded-md w-[300px]" placeholder="Enter todos" autofocus>
         <button id="add-btn" class="bg-blue-400 w-[150px] p-2 rounded-md">Add Todo</button>
     </form>
-    <ul id="todo-list" class="list-item-custom flex flex-col justify-center items-center"></ul>
+    <ol id="todo-list" class="list-item-custom flex flex-col justify-center items-center"></ol>
+
+    <button onclick="storageClear()" class="bg-gray-200">Clear Storage</button>
 
     <script src="./script.js"></script>
 </body>
