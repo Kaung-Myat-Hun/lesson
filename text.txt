@@ -334,7 +334,7 @@ todo list (
  git push 
 
  array.filter( () => {} ) <= new array return ( filtered array )
- 
+
  dom ( manipulte ) javascript => build in method ( fucntion )
 
 console = {
@@ -353,3 +353,52 @@ array < second value ( must be string )
 array method .join(); .split();
 
 ","
+
+array method 
+
+number , string => string alphabet 
+> 111 , 211 , 
+111 , 211 , 3
+
+0 ~ 9 , 
+10 ~ 20 
+
+reverse();
+
+array map 
+
+object = {
+
+}
+
+es 6 
+
+operator 
+? : ternary operator ( if else )
+&& short circut ( true >  )
+
+condition ( true ) && condition ( false ) && "hello" 
+
+true 
+
+nullish operator ?
+
+object > null / undefined 
+
+object <= api request ( database ) => internet connection ( object )
+
+side effect ( third party data ) api request ( project )
+fetch() <= async await 
+
+async => {
+
+}
+
+async 
+
+engine () {
+   event loop : [ async             ], <= (  )
+   ....... other 
+}
+api request <= promise -> data (  )
+
