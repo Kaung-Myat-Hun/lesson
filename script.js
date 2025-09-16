@@ -1,67 +1,77 @@
-// const input = document.getElementById("input");
-// const btn = document.getElementById("add-btn");
-// const list = document.getElementById("todo-list");
-// const form = document.getElementById("form");
+const input = document.getElementById("input");
+const btn = document.getElementById("add-btn");
+const list = document.getElementById("todo-list");
+const form = document.getElementById("form");
+const loading = document.getElementById("loading");
+let loadingState = true;
+const changeBtn = document.getElementById("change-theme");
+let mode = 'light';
 
-// let todos = [];
-// let todoText = "";
+let todos = [];
+let todoText = "";
 
-// const deleteTodo = (li) => {
-//     const filtered = todos.filter((item) => {
-//         return item !== li.srcElement.innerText
-//     })
-//     todos = filtered
-//     loopRenderFunction();
-// }
+const deleteTodo = (li) => {
+    const filtered = todos.filter((item) => {
+        return item.title !== li.srcElement.innerText
+    })
+    todos = filtered
+    loopRenderFunction();
+}
 
-// const loopRenderFunction = () => {
-//     list.innerHTML = "";
-//     for(let i =0 ;i < todos.length ; i++){
-//         const liTag = document.createElement("li");
-//         liTag.onclick = deleteTodo;
-//         liTag.innerText = (i+1) + " " + todos[i];
-//         list.appendChild(liTag);
-//     }
-// }
+const loopRenderFunction = () => {
+    list.innerHTML = "";
+    for(let i =0 ;i < todos.length ; i++){
+        const liTag = document.createElement("li");
+        liTag.onclick = deleteTodo;
+        liTag.innerText = todos[i].title;
+        list.appendChild(liTag);
+    }
+    loading.style.display="none";
+        list.style.display="block";
+}
 
-// function init(){
-//     const localStorageData = localStorage.getItem("test");
-//     if(localStorageData){
-//         todos = localStorageData.split(",");
-//         loopRenderFunction();
-//     }
-// }
-// init();
+function init(){
+    if(loadingState){
+        loading.style.display="block";
+        list.style.display="none";
+    }
+    const localStorageData = localStorage.getItem("test");
+    if(localStorageData){
+        todos = localStorageData.split(",");
+        loopRenderFunction();
+    }
+}
+init();
 
-// input.addEventListener("change" , (e)=> {
-//     todoText = e.target.value;
-// });
+input.addEventListener("change" , (e)=> {
+    todoText = e.target.value;
+});
 
-// form.addEventListener("submit", (e) => {
-//     e.preventDefault();
-//     if(todoText === ""){
-//         alert("Cannot add empty string");
-//         return ;
-//     }
-//     todos.push(todoText);
-//     input.value = "";
-//     const joined = todos.join();
-//     localStorage.setItem( "test" , joined );
-//     loopRenderFunction();
-// })
+form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    if(todoText === ""){
+        alert("Cannot add empty string");
+        return ;
+    }
+    todos.push(todoText);
+    input.value = "";
+    const joined = todos.join();
+    localStorage.setItem( "test" , joined );
+    loopRenderFunction();
+})
 
-// function storageClear(){
-//     localStorage.clear();
-//     sessionStorage.clear();
-// }
+function storageClear(){
+    localStorage.clear();
+    sessionStorage.clear();
+}
 
-// // const arr = [ 7 , 4 ,5 ,1 , 9 ];
-// // arr.reverse();
-// // console.log(arr);
+// const arr = [ 7 , 4 ,5 ,1 , 9 ];
+// arr.reverse();
+// console.log(arr);
 
-// // const arr1 = [2 ,11, 12 , 14 , 20,13 ]
-// // arr1.sort();
-// // console.log(arr1);
+// const arr1 = [2 ,11, 12 , 14 , 20,13 ]
+// arr1.sort();
+// console.log(arr1);
 
 // const arr2 = [
 //     {
@@ -93,14 +103,36 @@
 
 // obj.work();
 
-let variable = 3;
-const obj1 = {
-    name: "hi"
-};
+// let variable = 3;
+// const obj1 = {
+//     name: "hi"
+// };
 
-console.log( variable < 3 ? "Less than 3" : "Greater than 3" )
+// console.log( variable < 3 ? "Less than 3" : "Greater than 3" )
 
-console.log(variable <= 3 && "Equal or less than 3")
+// console.log(variable <= 3 && "Equal or less than 3")
 
-console.log(obj1?.name); // object <= null / undefined (  ) // skipped 
-console.log("after error");
+// console.log(obj1?.name); // object <= null / undefined (  ) // skipped 
+// console.log("after error");
+
+async function apiCalled() {
+    const promise = await fetch("https://jsonplaceholder.typicode.com/todos");
+    const result = await promise.json();
+    todos = result
+    loopRenderFunction();
+}
+apiCalled();
+
+changeBtn.addEventListener("click", () => {
+    mode = mode === 'light' ? 'dark' : "light";
+    const btnTxt = mode === 'light' ? "dark" : "light";
+    changeBtn.innerText = btnTxt;
+   if(mode === 'light'){
+    document.body.style.background= "#4c4c4c";
+    document.body.style.color= "#fff";
+   }else{
+    document.body.style.background= "white";
+    document.body.style.color= "#000";
+   }
+})
+

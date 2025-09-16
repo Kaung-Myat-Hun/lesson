@@ -402,3 +402,46 @@ engine () {
 }
 api request <= promise -> data (  )
 
+
+api <= ( application programming interface ) 
+function, feature ( program )
+
+frontend , backend 
+
+frontend / backend 
+
+frontend ( vanilla JS , jQuery , ReactJS , VueJS , AngularJS [TS] , )
+
+backend ( NodeJS , ExpressJS ) backend server process 
+
+frontend & backend ( program ) JSON ( Object format )
+
+frontend ( end user ) <= ( secure backend database ) => api 
+
+frontend ( api ) => domain name url /end-point ( backend ) <= post 
+
+database => return [
+   {
+
+   },
+   {
+
+   }
+]
+
+https://typicode.com/posts ( data get api endpoint )
+
+api ( http , https ) <= GET , POST , PUT , PATCH , DELETE ( CRUD => Create , Read , Update , Delete )
+
+GET => to get backend response data
+POST => send data from frontend to backend ( Create )
+PUT , PATCH => Update data 
+DELETE => Delete data from database
+
+fetch ( parameter ) => string , api endpoint
+
+side effect () => third party api 
+
+async , await 
+
+

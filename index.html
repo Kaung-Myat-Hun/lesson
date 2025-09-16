@@ -19,6 +19,10 @@
         .list-item-custom:hover li{
             background-color: rgba(128, 128, 128, 0.195);
         }
+        .list-item-custom{
+            height: calc(100vh - 150px);
+            overflow: auto;
+        }
     </style>
 </head>
 <body>
@@ -28,9 +32,11 @@
         <input type="text" id="input" name="input" class="bg-gray-200 py-2 px-5 outline-none rounded-md w-[300px]" placeholder="Enter todos" autofocus>
         <button id="add-btn" class="bg-blue-400 w-[150px] p-2 rounded-md">Add Todo</button>
     </form>
+    <h4 id="loading" class="text-center tex-[30px] font-semibold">Loading....</h4>
     <ol id="todo-list" class="list-item-custom flex flex-col justify-center items-center"></ol>
 
     <button onclick="storageClear()" class="bg-gray-200">Clear Storage</button>
+    <button id="change-theme">light</button>
 
     <script src="./script.js"></script>
 </body>
