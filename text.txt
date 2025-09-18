@@ -444,4 +444,62 @@ side effect () => third party api
 
 async , await 
 
+npm ( node package manager ) => JS library 
+Node JS => ( boilor plate code )
+api request => ( axios , tailwind css ,  )
 
+
+es 5 method ( import )
+
+es 6 module method
+
+JS library , React , Angular , Next 
+
+
+mini project ( mini pos )
+
+
+<!DOCTYPE html> <=== HTML version 5 ( declare )
+<html lang="en"> <=== en ( english ) <= ( Google Translate api )
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <== responsive margin : 10px; ( 8px )
+    <title>tailwind css</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href=""> <===
+</head>
+
+<body>
+    <h1></h1>
+    <script src="./script.js" type="module"></script> <== JS code > JS file 
+</body>
+</html>
+
+POS {
+   components => search bar , item , price , calculation ( item increase , decrease ) , add to cart , confirm ,
+   design => 
+   function => {
+      item select ( click to select ),
+      item ( edit < increase count or decrease count> ),
+      filter ( category ),
+      search ( item name ),
+      price ( calculation < base on item count > ),
+      final print
+   }, 
+   data => {
+      pos-item : {
+         name : "",
+         category: "",
+         price:"",
+      },
+      customer-item:{
+         name : "",
+         total: "",
+         count: 10
+      }
+   }
+}
+
+
+sale person => customer ( item )

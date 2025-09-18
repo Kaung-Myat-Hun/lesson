@@ -4,40 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>tailwind css</title>
-    <link rel="stylesheet" href="./src/output.css">
-    <style>
-        .list-item-custom li{
-            font-size: 20px;
-            text-align: center;
-            background-color: rgba(128, 128, 128, 0.348);
-            padding: 4px;
-            width: 30%;
-            margin-top: 5px;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        .list-item-custom:hover li{
-            background-color: rgba(128, 128, 128, 0.195);
-        }
-        .list-item-custom{
-            height: calc(100vh - 150px);
-            overflow: auto;
-        }
-    </style>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="./favico.svg">
 </head>
 <body>
-    <h1 class="text-center text-[24px] font-semibold">Todo List</h1>
-
-    <form id="form" class="p-4 flex justify-center">
-        <input type="text" id="input" name="input" class="bg-gray-200 py-2 px-5 outline-none rounded-md w-[300px]" placeholder="Enter todos" autofocus>
-        <button id="add-btn" class="bg-blue-400 w-[150px] p-2 rounded-md">Add Todo</button>
-    </form>
-    <h4 id="loading" class="text-center tex-[30px] font-semibold">Loading....</h4>
-    <ol id="todo-list" class="list-item-custom flex flex-col justify-center items-center"></ol>
-
-    <button onclick="storageClear()" class="bg-gray-200">Clear Storage</button>
-    <button id="change-theme">light</button>
-
-    <script src="./script.js"></script>
+    <h1>POS</h1>
+    <script src="./script.js" type="module"></script>
 </body>
 </html>
