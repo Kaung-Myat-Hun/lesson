@@ -3,12 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>tailwind css</title>
+    <title>POS</title>
     <link rel="stylesheet" href="./style.css">
     <link rel="icon" href="./favico.svg">
 </head>
 <body>
-    <h1>POS</h1>
+    <div class="main-container">
+        <section id="side-menu">
+            <div class="logo-container">
+                <div class="logo-image">
+                    <img class="logo" src="./icons/logo.svg" alt="logo" >
+                </div>
+            </div>
+            <div class="menu-section">
+                <div class="menu-logo-container">
+                    <img class="menu-logo" src="./icons/home.svg" alt="home logo">
+                </div>
+                <div class="menu-logo-container active-menu">
+                    <img class="menu-logo" src="./icons/menu.svg" alt="home logo">
+                </div>
+                <div class="menu-logo-container">
+                    <img class="menu-logo" src="./icons/chart.svg" alt="home logo">
+                </div>
+            </div>
+            <div class="setting-section">
+                <div class="menu-logo-container">
+                    <img class="menu-logo" src="./icons/setting.svg" alt="home logo">
+                </div>
+                <div class="menu-logo-container">
+                    <img class="menu-logo" src="./icons/logout.svg" alt="home logo">
+                </div>
+            </div>
+        </section>
+
+        <section id="main-content">
+            <div class="card-container" id="card-container-id">
+                
+            </div>
+        </section>
+        <section id="order"></section>
+    </div>
     <script src="./script.js" type="module"></script>
 </body>
 </html>
