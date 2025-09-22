@@ -503,3 +503,6 @@ POS {
 
 
 sale person => customer ( item )
+
+
+item list => function ( parameter ) => add to cart 
