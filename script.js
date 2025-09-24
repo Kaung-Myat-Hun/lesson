@@ -72,18 +72,33 @@ function render(){
 }
 render();
 
-const cartList = [];
+let cartList = [];
+let duplicate = false; // check for duplicate item 
 
-function AddToCart (item) { 
-    console.log(item)
+function AddToCart (item) {
+    duplicate = false;
     const addedItem = {
         count: 1,
         price : item.itemPrice,
         name: item.itemName,
-        img: item.itemImage
+        img: item.itemImage,
     }
-    cartList.push(addedItem);
-    console.log('cart list', cartList);
+    const modified = cartList.map((cartItem) => {
+        if(cartItem.name === item.itemName){
+            duplicate = true;
+            const modifiedItem = {
+                ...cartItem,
+                count : cartItem.count + 1
+            }
+            return modifiedItem
+        }
+        return cartItem
+    })
+    if(duplicate){
+        cartList = modified;
+    }else{
+        cartList.push(addedItem)
+    }
     cartRender();
 }
 
@@ -112,8 +127,14 @@ function cartRender() {
         itemNameTag.innerText = cartList[i].name;
         itemNameTag.classList.add('cart-item-name');
         minusTag.innerText = "-";
+        minusTag.addEventListener("click", () => {
+            minusCount(i);
+        })
         minusTag.classList.add('cart-btn');
         plusTag.innerText = "+";
+        plusTag.addEventListener("click", () => {
+            addCount(i);
+        })
         plusTag.classList.add('cart-btn');
         numberTag.innerText = cartList[i].count;
         numberTag.classList.add('cart-btn');
@@ -131,6 +152,23 @@ function cartRender() {
         mainDiv.appendChild(priceTag);
         // final render
         cart.appendChild(mainDiv);
-    } 
+    }
     total.innerText = `Total : ${totalPrice}`
+}
+
+function addCount(index) {
+    cartList[index].count = cartList[index].count + 1;
+    cartRender();
+}
+
+function minusCount(index){
+    if(cartList[index].count > 1){
+        cartList[index].count = cartList[index].count - 1;
+        cartRender();
+        return;
+    }else{
+        cartList.splice(index , 1);
+        cartRender();
+        return;
+    }
 }

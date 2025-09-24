@@ -506,3 +506,13 @@ sale person => customer ( item )
 
 
 item list => function ( parameter ) => add to cart 
+
+condition 
+
+... ( spread operator ) => ...[ 1, 2 , 3 ,4 ] => 1, 2, 3, 4
+...{
+   name : "Kaung",
+   age: 29,
+}
+name: "Kaung"
+age: 29
