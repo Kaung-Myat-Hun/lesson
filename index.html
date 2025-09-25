@@ -37,12 +37,16 @@
         </section>
 
         <section id="main-content">
+            <div class="search-container">
+                <input type="text" placeholder="Search..." id="search-input">
+                <button id="search-btn">Search</button>
+            </div>
             <div class="card-container" id="card-container-id">
                 
             </div>
         </section>
         <section id="order">
-            <h4 class="order-title">Cart</h4>
+            <h4 class="order-title" id="item-count">Cart : 0</h4>
             <div id="cart">
                 
             </div>
@@ -52,7 +56,11 @@
             </div>
         </section>
 
+        <div id="loading">
+            <img src="images/loading.gif" class="loading-image">
+        </div>
     </div>
+
     <script src="./script.js" type="module"></script>
 </body>
 </html>

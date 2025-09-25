@@ -516,3 +516,10 @@ condition
 }
 name: "Kaung"
 age: 29
+
+search => 
+
+async function ,
+setInterval , setTimeout 
+period > function called 
+setTimeout => 

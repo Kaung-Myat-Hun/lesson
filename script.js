@@ -1,41 +1,26 @@
+const apiEndPoint = 'http://localhost:3000/item';
+let itemList ;
 
-const itemList = [
-    {
-        itemName: "Apple",
-        itemPrice: "5",
-        id: 1,
-        itemDetail: "This is fesh juicy apple",
-        itemImage: "images/apple.jpg",
-        logo: "./icons/cart.svg"
-    },
-    {
-        itemName: "Orange",
-        itemPrice: "6",
-        id: 1,
-        itemDetail: "This is fesh juicy orange",
-        itemImage: "images/orange.jpg",
-        logo: "./icons/cart.svg"
-    },
-    {
-        itemName: "Grape",
-        itemPrice: "10",
-        id: 1,
-        itemDetail: "This is fesh juicy grape",
-        itemImage: "images/grape.png",
-        logo: "./icons/cart.svg"
-    },
-    {
-        itemName: "Banana",
-        itemPrice: "3.5",
-        id: 1,
-        itemDetail: "This is fesh juicy banana",
-        itemImage: "images/banana.webp",
-        logo: "./icons/cart.svg"
+let saveItemList ;
+const loading = document.querySelector("#loading");
+
+async function apiCalled(){
+    const promise = await fetch(apiEndPoint);
+    const result = await promise.json();
+    itemList = result;
+    saveItemList = result;
+
+    if(result){
+        loading.style.display = "none";
+        render();
     }
-]
+}
+
+apiCalled();
 
 function render(){
     const cardContainer = document.getElementById('card-container-id');
+    cardContainer.innerHTML = "";
     for(let i = 0; i<itemList.length; i++){
         const cardTag = document.createElement('div');
         const divTag = document.createElement("div");
@@ -70,7 +55,6 @@ function render(){
         cardContainer.appendChild(cardTag);
     }
 }
-render();
 
 let cartList = [];
 let duplicate = false; // check for duplicate item 
@@ -101,7 +85,7 @@ function AddToCart (item) {
     }
     cartRender();
 }
-
+const itemCount = document.getElementById("item-count");
 function cartRender() {
     const total = document.getElementById('total');
     total.innerHTML = "Total : 0";
@@ -154,6 +138,8 @@ function cartRender() {
         cart.appendChild(mainDiv);
     }
     total.innerText = `Total : ${totalPrice}`
+    itemCount.innerText = `Cart : ${cartList.length}`
+
 }
 
 function addCount(index) {
@@ -172,3 +158,22 @@ function minusCount(index){
         return;
     }
 }
+let searchText = ""; // value got
+const searchInput = document.getElementById("search-input");
+const searchBtn = document.getElementById("search-btn");
+
+searchInput.addEventListener("change", (e) => {
+    console.log(e.target.value);
+    searchText = e.target.value;
+});
+
+searchBtn.addEventListener("click", () =>{
+    itemList = saveItemList;
+    if(searchText === ""){
+        render();
+    }else{
+        const filtered = itemList.filter((item) => item.itemName.toLowerCase().includes(searchText));
+        itemList = filtered;
+    }
+    render();
+});

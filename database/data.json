@@ -1,0 +1,37 @@
+{
+    "item":[
+  {
+    "id": 1,
+    "itemName": "Apple",
+    "itemPrice": "5",
+    "itemDetail": "This is fresh juicy apple",
+    "itemImage": "images/apple.jpg",
+    "logo": "./icons/cart.svg"
+  },
+  {
+    "id": 2,
+    "itemName": "Orange",
+    "itemPrice": "6",
+    "itemDetail": "This is fresh juicy orange",
+    "itemImage": "images/orange.jpg",
+    "logo": "./icons/cart.svg"
+  },
+  {
+    "id": 3,
+    "itemName": "Grape",
+    "itemPrice": "10",
+    "itemDetail": "This is fresh juicy grape",
+    "itemImage": "images/grape.png",
+    "logo": "./icons/cart.svg"
+  },
+  {
+    "id": 4,
+    "itemName": "Banana",
+    "itemPrice": "3.5",
+    "itemDetail": "This is fresh juicy banana",
+    "itemImage": "images/banana.webp",
+    "logo": "./icons/cart.svg"
+  }
+]
+
+}
